@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: keycloak-demo
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/hana
+          #the url to validate jwt
+          jwks-uri: http://localhost:8080/realms/hana/protocol/openid-connect/certs
+server:
+  port: 8081
